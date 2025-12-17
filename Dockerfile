@@ -22,5 +22,5 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | b
 ENV NVM_DIR=/root/.nvm
 # install node
 RUN bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION"
-RUN npm i pnpm -g
-RUN npx -y playwright install --with-deps --only-shell
+RUN bash -c "source $NVM_DIR/nvm.sh && nvm use $NODE_VERSION && npm i pnpm -g"
+RUN bash -c "source $NVM_DIR/nvm.sh && nvm use $NODE_VERSION && npx -y playwright install --with-deps --only-shell"
