@@ -1,4 +1,4 @@
-FROM emscripten/emsdk:3.1.44
+FROM emscripten/emsdk:4.0.7
 
 RUN apt-get update;\
     apt-get install -y git build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev;\
